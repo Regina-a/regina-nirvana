@@ -1,0 +1,21 @@
+/* *, * ::before, *::after {
+    box-sizing: border-box;
+    } */
+    .car{
+    /* height: 100rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .container{
+        width: 800px;
+        max-width: 80%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 10px;
+        /* box-shadow: 0 0 2px 2px; */
+    }
+    .body9{
+        background-color:purple;
+
+    }
