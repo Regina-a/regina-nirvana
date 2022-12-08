@@ -1,47 +1,28 @@
-let startButton = document.getElementById('start-btn')
-let questionContainerElements = document.getElementById('question-container')
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
-
-startButton.addEventListener('click', startGame)
-let shuffledQuestions, currentQuestionIndex
-
-
-function startGame(){
-startButton.classList.add('hide')
-questionContainerElements.classList.remove('hide')
-shuffledQuestions = questions.sort(()=> Math.random() - .5)
-currentQuestionIndex = 0;
-setNextQuestion()
-}
-
-function setNextQuestion(){
-    showQuestion(shuffledQuestions[currentQuestionIndex])
-
-}
-function showQuestion(question) {
-    questionElement.innerText = question.question
-    question.answers.forEach(answer => {
-        const button = document.createElement('button')
-        button.innerText = answer.text
-        button.classList.add('btn')
-        if (answer.correct) {
-          button.dataset.correct = answer.correct
-        }
-        button.addEventListener('click', selectAnswer)
-        answerButtonsElement.appendChild(button)
-      })
-}
-let questions = [
-    {
-        question:"SI",
-        answers: [
-           { text:'p'},
-            {text:'o'},
-            { text:'a'},
-            { text:'i'}
-
-
-        ]
-    }
-]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="test-styles.css" rel="stylesheet">
+  <script defer src="test-quiz.js"></script>
+  <title>Quiz App</title>
+</head>
+<body>
+  <div class="container">
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
+</body>
+</html>
