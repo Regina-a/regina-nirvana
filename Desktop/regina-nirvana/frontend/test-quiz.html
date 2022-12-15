@@ -7,9 +7,18 @@
   <link href="test-styles.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="C:\Users\alive\Downloads\logo (1).png">
   <script defer src="test-quiz.js"></script>
-  <title>Test de ansiedad</title>
+    <title>Test de ansiedad</title>
 </head>
 <body>
+  <div id="navbar">
+    <img id="logo" src="C:\Andrea\Semestre 3\regina-nirvana\Desktop\regina-nirvana\logow.png">
+     <div id="navbar-right">
+       <a class="active" href="./main.html">inicio</a>
+       <a href="./test-quiz.html">Tests</a>
+       <a href="#about">Mind Tracker</a>
+       <a href="#about">Tu cuenta</a>
+     </div>
+   </div>
   <div id="test-inicios">
   <button class="enviar" onclick="TestAnsiedad()">Test Ansiedad <img class="img-test" src="https://www.osakidetza.euskadi.eus/contenidos/informacion/osk_osaesk_ansiedad/es_def/images/ansiedad.png"></button>
   <button class="enviar" onclick="TestDepresion()">Test Depresion <img class="img-test" src="https://static.wixstatic.com/media/edf985_24a66933548d4def9f2293df863bef0d~mv2.png/v1/fill/w_1080,h_1080,al_c/edf985_24a66933548d4def9f2293df863bef0d~mv2.png"></button>
@@ -20,7 +29,7 @@
     <div id="question-container" class="hide">
       <div id="question">Pregunta</div>
       <div id="answer-buttons" class="btn-grid">
-        <button class="btn">Answer 1</button>
+        <button  class="btn">Answer 1</button>
         <button class="btn">Answer 2</button>
         <button class="btn">Answer 3</button>
         <button class="btn">Answer 4</button>
@@ -33,12 +42,14 @@
       <button id="finish-btn" class="finish-btn btn hide" onclick="finish()">Finish</button>
     
   </div>
-  </div> <a href="./test-quiz.html"><button class="regresar">regresar</button></a>
+  </div><a href="./test-quiz.html"><button class="regresar">regresar</button></a>
 </div>
 <div id="respuestas-test1">
-<p>en base a tus respuestas</p>
+<p class="nota">Gracias por tus respuestas y recuerda:</p>
+<div class="img-nota">
+<img class="notafinal" src="https://pbs.twimg.com/media/FkCSxwhUoAITkJv?format=jpg&name=900x900"></div>
+<a href="./test-quiz.html"><button class="regresar">regresar</button></a>
 </div>
-<div></div>
 
 </body>
 </html>
